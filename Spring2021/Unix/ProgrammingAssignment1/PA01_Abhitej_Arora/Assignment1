@@ -1,0 +1,16 @@
+Script started on Thu Feb 11 00:07:30 2021
+[1m[7m%[27m[1m[0m                                                                                                                             ]7;file://Abhitejs-MacBook-Pro.local/Users/apple[0m[27m[24m[Japple@Abhitejs-MacBook-Pro ~ % [K[?2004h[7mg++ -o testExec /Users/apple/Desktop/Spring2021/Unix/ProgrammingAssignment1/main.cpp [27m[85D[27mg[27m+[27m+[27m [27m-[27mo[27m [27mt[27me[27ms[27mt[27mE[27mx[27me[27mc[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27ma[27mp[27mp[27ml[27me[27m/[27mD[27me[27ms[27mk[27mt[27mo[27mp[27m/[27mS[27mp[27mr[27mi[27mn[27mg[27m2[27m0[27m2[27m1[27m/[27mU[27mn[27mi[27mx[27m/[27mP[27mr[27mo[27mg[27mr[27ma[27mm[27mm[27mi[27mn[27mg[27mA[27ms[27ms[27mi[27mg[27mn[27mm[27me[27mn[27mt[27m1[27m/[27mm[27ma[27mi[27mn[27m.[27mc[27mp[27mp[27m [?2004l
+[1m[7m%[27m[1m[0m                                                                                                                             ]7;file://Abhitejs-MacBook-Pro.local/Users/apple[0m[27m[24m[Japple@Abhitejs-MacBook-Pro ~ % [K[?2004h../testExec[?2004l
+Enter the URL you would like to be analyzed 
+https://cs.utdallas.edu:80/directory/faculty/people.html?name=Robert
+
+Protocol:    https
+Domain:      cs.utdallas.edu
+Port:        80
+File path:   /directory/faculty/people.html
+Parameters:  name=Robert
+[1m[7m%[27m[1m[0m                                                                                                                             ]7;file://Abhitejs-MacBook-Pro.local/Users/apple[0m[27m[24m[Japple@Abhitejs-MacBook-Pro ~ % [K[?2004h[7mhttps://cs.utdallas.edu:80/directory/faculty/people.html?name=Robert[27m[68D[27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mc[27ms[27m.[27mu[27mt[27md[27ma[27ml[27ml[27ma[27ms[27m.[27me[27md[27mu[27m:[27m8[27m0[27m/[27md[27mi[27mr[27me[27mc[27mt[27mo[27mr[27my[27m/[27mf[27ma[27mc[27mu[27ml[27mt[27my[27m/[27mp[27me[27mo[27mp[27ml[27me[27m.[27mh[27mt[27mm[27ml[27m?[27mn[27ma[27mm[27me[27m=[27mR[27mo[27mb[27me[27mr[27mt[1C[1C[1Ct rt[P[46C [47D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[?2004l
+zsh: no matches found: https://cs.utdallas.eu:80/directory/faculty/people.html?name=Robert
+[1m[7m%[27m[1m[0m                                                                                                                             ]7;file://Abhitejs-MacBook-Pro.local/Users/apple[0m[27m[24m[Japple@Abhitejs-MacBook-Pro ~ % [K[?2004heexit[?2004l
+
+Script done on Thu Feb 11 00:08:55 2021
