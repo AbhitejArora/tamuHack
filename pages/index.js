@@ -29,8 +29,6 @@ export default function Home({ allPostsData }) {
           <h2><Link href = "/report"> Click here to view the Report </Link></h2>
         
 
-      
-
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
