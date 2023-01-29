@@ -35,6 +35,7 @@
   margin: 0 0 1rem;
   line-height: 1.15;
   font-size: 3.6rem;
+  text-align: middle;
 }
 
 .title {
@@ -48,7 +49,7 @@
 
 
 .description {
-  line-height: 1.5;
+  line-height: 0.2;
   font-size: 1.5rem;
 }
 
@@ -93,7 +94,7 @@
 }
 
 .logo {
-  height: 1em;
+  height: 2em;
 }
 
 @media (max-width: 600px) {
@@ -104,5 +105,13 @@
 }
 
 .subtitle {
-  
+  color: #0070f3;
+  text-decoration: none;
+  margin: 0 0 1rem;
+  line-height: 1.15;
+  font-size: 1.8rem;
+}
+
+.item {
+  flex-grow: 4; /* default 0 */
 }

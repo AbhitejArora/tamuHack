@@ -17,6 +17,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
+   
     <div className={styles.container}>
       <Head>
         <title>SafeOR</title>
@@ -24,9 +25,8 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to SafeOR! </h1>
-          <h2><Link href = "/report"> Click here to view the Report </Link></h2>
+        <h1 className={styles.title}>Welcome to SafeOR! </h1>
+          <h2 className={styles.subtitle}><Link href = "/report"> Click here to view the Report </Link></h2>
 
         {/* <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

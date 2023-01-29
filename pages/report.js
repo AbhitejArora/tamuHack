@@ -2,13 +2,44 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Script from 'next/script';
 import Layout from '../components/layout';
-import { Bar, Line, Scatter, Bubble } from "react-chartjs-2"
+import { Bar, Line, Scatter, Bubble, Doughnut } from "react-chartjs-2"
 import Chart from 'chart.js/auto';
 import styles from '../styles/Home.module.css';
 
-
+const doughData = {
+  backgroundColor:[
+    "rgb(2,88,255)",
+    "rgb(249,151,0)",
+    "rgb(255,199,0)",
+    "rgb(32,214,152)",
+  ],
+  labels: ["Medial Error", "Incompetence", "Fatigue", "Medicial Error"],
+  datasets: [
+    {
+      label: "My first Dataset",
+      data: [3, 7, 2, 4],
+      backgroundColor: [
+        "rgb(2,88,255)",
+    "rgb(249,151,0)",
+    "rgb(255,199,0)",
+    "rgb(32,214,152)",
+      ],
+      hoverOffset: 1,
+    },
+  ],
+  };
+  
+  const doughOptions = {
+    elements: {
+      arc: {
+        weight: 0.05,
+        borderWidth: 1,
+      },
+    },
+    cutout: 100,
+  };
 const data = {
-  labels: ["Jan", "Feb", "March", "April"],
+  labels: ["5 mins", "10 mins", "20 mins", "25 mins"],
   datasets: [
     {
       data: [3, 5, 6, 7],
@@ -27,6 +58,7 @@ const options = {
     line: {
       tension: 0,
       borderWidth: 2,
+      pby: 50,
       borderColor: "rgba(47,97,68,1)",
       fill: "start",
       backgroundColor: "rgba(47,97,68,0.3)",
@@ -36,6 +68,7 @@ const options = {
       hitRadius: 0,
     },
   },
+
   scales: {
     xAxis: {
       display: false,
@@ -54,18 +87,36 @@ export default function Report() {
       <Head>
         <title>Report</title>
       </Head>
-
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">Total time spent on last operation</div>
-    <p class="text-gray-700 text-base pb-5">
-43 minutes    </p>
-  </div>
-  </div>
+      <div align="center">
+      <img src = "images/smalll.jpg"  />
       
+      <p class="text-[#008CA4] text-4xl text-center">Analytics</p>
+       </div>
+     <div class=" grid w-xl  grid-cols-3 gap-2 mt-5">
+        <div class=" max-w-sm rounded overflow-hidden shadow-md mb-10">
+          <div class="m-1">
+              <div class="font-bold text-xl m-2 ">Total time spent on last operation</div>
+              <p class="text-gray-700 text-base m-2"> 43 minutes </p>
+          </div>
+        
+        
+        </div>
+        <div class=" max-w-sm rounded overflow-hidden shadow-md mb-10">
+              <div class="font-bold text-xl m-2">Possible fatigue errors</div>
+              <p class="text-gray-700 text-base m-2"> 5 </p>
+          </div>
+          <div class=" max-w-sm rounded overflow-hidden shadow-md mb-10">
+              <div class="font-bold text-xl m-2">Possible equipment/human error</div>
+              <p class="text-gray-700 text-base m-2"> 5 </p>
+          </div>
+      </div>
+      <div class=" flex-box m-10 text-base grid w-full max-w-screen-xl d grid-cols-1 gap-5 px-2 md:grid-cols-2 xl:px-3 ">
+      <div className='item'> <Line data={data} width={100} height={40} options={options} />
+     </div>
+     <div className='item'> <Doughnut data ={doughData} width={10} height= {10} options={doughOptions} /></div>
 
-      <Line data={data} width={100} height={40} options={options} />
-
+            
+      </div>
 
     </Layout>
   );
