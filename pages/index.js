@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import Layout from '../components/layout';
- 
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,8 +15,11 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  function handleClick() {
+    alert("increment like count")
+  }
+
   return (
-    <Layout home>
    
     <div className={styles.container}>
       <Head>
@@ -24,73 +27,32 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className={styles.title}>Welcome to SafeOR! </h1>
-          <h2 className={styles.subtitle}><Link href = "/report"> Click here to view the Report </Link></h2>
-
-        {/* <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-         
-        </div> */}
-      </main>
-
+      <img src= "images/logo.jpg" />
+      <p class="text-[#5CC3C6] text-6xl mt-10 mb-5">Shaping technology to save lives</p>
+     <Link href="/procedure">
+        <button onClick={handleClick} id="script" class="bg-[#5CC3C6] text-white font-bold  rounded-full m-5 " >
+          Start Procedure
+        </button>
       
+        </Link>
+        <Link href="/report">
+        <button class="bg-[#5CC3C6] text-white font-bold  rounded-full ">
+          View Report
+        </button>
+      </Link>
 
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      <h3 class="align-center font-bold text-3xl mt-20">What is SafeOR? </h3>
+      <h4 class="text-m mr-10 ml-10 mt-10">SafeOR uses modern technologies such as computer vision, NLP, and machine learning to bring visibility to the patient safety and need for tech enabled solutions to reduce medical error.
+      When we look the numbers of deaths that are caused due to medical error, they are at an insane amount and do not seem to be decreasing. <b> How we do it? </b> We worked the computer to <b>recognize patterns of fatigue, and incompetence 
+      if any caused by external factors. </b>The computer, combined with a high definition lens fitted in the operating room is able to track those patterns and tackle some of those challenges real-time with feedback and some through
+      a report generate at the end of every procedure.  </h4>
+      <Link href="/faq">
+        <button class="bg-[#5CC3C6] text-white font-bold  rounded-full m-5">
+         FAQ
+        </button>
+        </Link>
+        <div class='footer'>Developed by Danielx2, Kelly and Abhitej.</div>
     </div>
-
-    </Layout>
+    
   )
 }

@@ -45,4 +45,12 @@ ul {
 button {
   padding: 0.5rem 1rem;
   font-weight: bold;
+  color: white;
+}
+
+footer {
+  font: 12;
+  color: black;
+  align-content: bottom;
+  padding-top: 5rem;
 }
