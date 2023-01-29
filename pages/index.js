@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
     <Layout home>
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>SafeOR</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -124,7 +124,7 @@ export default function Home({ allPostsData }) {
         }
       `}</style>
     </div>
-    <section className={`${styles.headingMd} ${styles.padding1px}`}>
+    {/* <section className={`${styles.headingMd} ${styles.padding1px}`}>
         <h2 className={styles.headingMd}>Blog</h2>
         <ul className={styles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -137,7 +137,7 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </Layout>
   )
 }
